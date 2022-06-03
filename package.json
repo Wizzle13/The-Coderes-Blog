@@ -1,5 +1,16 @@
 {
-	"dependencies": {
+  "name": "The-Coders-Blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Chris Burton",
+  "license": "MIT",
+  "dependencies": {
 		"bcrypt": "^5.0.1",
 		"connect-session-sequelize": "^7.1.4",
 		"dotenv": "^16.0.1",
