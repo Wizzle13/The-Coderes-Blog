@@ -7,7 +7,7 @@ const helpers = require('./utils/helpers');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const db = require('./models');
+//const db = require('./models');
 
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
@@ -17,7 +17,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'Wonderful World of Wizzle',
   cookie: {},
   resave: false,
   saveUninitialized: true,
