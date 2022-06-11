@@ -4,10 +4,10 @@
     {{title}}
     <span>{{content}}</span>
   </div>
-  {{!-- <div class="meta">
-     by {{user.username}} on
+  <div class="meta">
+    {{likeVote_count}} {{format_plural "point" likeVote_count}} by {{user.username}} on
     {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-  </div> --}}
+  </div>
 </article>

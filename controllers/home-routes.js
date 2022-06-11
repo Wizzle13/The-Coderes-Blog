@@ -10,22 +10,24 @@ router.get('/', (req, res) => {
         'id',
         'title',
         'content',
-        'created_at'
-      ]//,
-      // include: [
-    //     {
-    //       model: Comment,
-    //       attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-    //       include: {
-    //         model: User,
-    //         attributes: ['username']
-    //       }
-    //     },
-    //     {
-    //       model: User,
-    //       attributes: ['username']
-    //     }
-    //   ]
+        'created_at',
+        [sequelize.literal('(SELECT COUNT(*) FROM likeVote WHERE post.id = likeVote.post_id)'), 'likeVote_count']
+
+      ],
+      include: [
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
     })
       .then(dbPostData => {
         // pass a single post object into the homepage template

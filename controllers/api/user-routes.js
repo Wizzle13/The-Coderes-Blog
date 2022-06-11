@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Vote} = require('../../models');
+const { User, Post, LikeVote} = require('../../models');
 const withAuth = require('../../utils/auth');
 // get all users
 router.get('/', (req, res) => {
@@ -25,15 +25,15 @@ router.get('/:id', (req, res) => {
         attributes: [
           'id',
           'title',
-          'post_url',
+          'content',
           'created_at'        
         ]
       },
       {
         model: Post,
         attributes: ['title'],
-        through: Vote,
-        as: 'voted_posts'
+        through: LikeVote,
+        as: 'liked_posts'
       }
 
     ]
@@ -52,7 +52,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+
   User.create({
     username: req.body.username,
     email: req.body.email,
