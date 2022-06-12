@@ -8,10 +8,10 @@
         <div class="card-header">    
             <input name="post-title" type="text" value="{{post.title}}" />
         </div> 
-        <div class="card-body text-secondary"> 
-            <p class="card-text">
+        <div class="card-body text-secondary card-text"> 
+            
                 <textarea name="post-content" id="post-content" rows="6">{{post.content}}</textarea>
-            </p>
+            
             <p class="card-text">
                 by you on {{format_date post.created_at}}
                 <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
