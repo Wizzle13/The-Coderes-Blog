@@ -3,7 +3,7 @@
   <div class="card-header"> {{title}}</div>
   <div class="card-body text-secondary">
     <p class="card-text">{{content}}</p>
-    <p class="card-text">{{likeVote_count}} {{format_plural "point" likeVote_count}} by {{user.username}} on
+    <p class="card-text">{{!-- {{likeVote_count}} {{format_plural "point" likeVote_count}} --}} by {{user.username}} on
     {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></p>
