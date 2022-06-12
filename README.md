@@ -62,7 +62,7 @@ User can create a login and added post.
   
 
   ## Links
-  GitHub Repository: https://github.com/wizzle13/The-Coders_blog
+  GitHub Repository: https://github.com/wizzle13/The-Coders-blog
 
   Heroku URL: https://the-coders-blog.herokuapp.com/
 
