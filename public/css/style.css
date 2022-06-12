@@ -98,6 +98,19 @@
     padding: 2% 4%;
   }
   
+  .btn {
+    background:#7d7d7d;
+    border:#ccc;
+    padding: 10;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+
+  }
   .btn-no-style {
     background: none;
     border: none;
