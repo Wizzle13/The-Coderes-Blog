@@ -45,10 +45,5 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
-router.get('/dashboard', withAuth, (req, res) => {
-    res.render('dashboard', {
-        loggedIn: req.session.loggedIn //Needed to regester loggedIn status on other pages
-    });
-});
 
 module.exports = router;
