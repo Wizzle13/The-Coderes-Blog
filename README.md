@@ -55,7 +55,7 @@ User can create a login and added post.
     
 
   ## Screenshots
-  <img src = "  ./screenshots/screenshot1.png">
+  <img src = "./public/images/screenshot1.png">
 
   
 
